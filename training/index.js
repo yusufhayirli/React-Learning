@@ -1,3 +1,5 @@
-import { summ } from './myModule';
+import {summ,subst} from './myModule';
 
 console.log(summ());
+
+console.log(subst());
