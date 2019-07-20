@@ -1,7 +1,13 @@
-export const summ = (a,b) => {
-    return a+b;
+//Functions
+export function sum(a, b) {
+    return a + b;
 };
 
-export const subst = (a,b) => {
-    return a-b;
-};
+//Constants
+export const subst = (a,b) => a-b;
+
+//You can call it as default operation. 
+export default (x) => {
+    return (x*x);
+}
+
