@@ -1,0 +1,7 @@
+To create global react app :
+
+npm install create-react-app -g
+
+To create your project :
+
+npm create-react-app your-project-name
