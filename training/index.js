@@ -1,10 +1,10 @@
 //imports randomname(default), sum and subst modules from myModule.js
-import randomname,{ sum , subst } from "./myModule";
+import randomname,{ sum as add , subst as difference } from "./myModule";
 
 //Gives 8
-console.log(sum(3,5));
+console.log(add(3,5));
 //Gives 5
-console.log(subst(7,2));
+console.log(difference(7,2));
 //Gives default operation's result
 console.log(randomname(5));
 
