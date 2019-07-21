@@ -4,11 +4,23 @@ import '../App.css';
 import News from './news';
 
 function App() {
+  const news = [{
+    title: "title 1",
+    description: "desc 1"
+  },
+  {
+    title: "title 2",
+    description: "desc 2"
+  },
+  {
+    title: "title 3",
+    description: "desc 3"
+  }];
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <News/>
+        <News news={news}/>
       </header>
     </div>
   );

@@ -3,15 +3,12 @@ import NewsItem from './newsitem';
 
 class news extends React.Component{
     render(){
-        const title = "my title";
-        const description = "title's description";
+        const element = this.props.news.map(news => <NewsItem 
+            title = {news.title}
+            description = {news.description} />);
         return(
             <div>
-                {2 + 2 === 4 ? "true" : "false"}
-                
-                <NewsItem 
-                    title = {title}
-                    description = {description} />
+                {element}
             </div>
         )
     }
