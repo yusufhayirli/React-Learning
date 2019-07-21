@@ -5,14 +5,17 @@ import News from './news';
 
 function App() {
   const news = [{
+    id: 1,
     title: "title 1",
     description: "desc 1"
   },
   {
+    id: 2,
     title: "title 2",
     description: "desc 2"
   },
   {
+    id:3,
     title: "title 3",
     description: "desc 3"
   }];
