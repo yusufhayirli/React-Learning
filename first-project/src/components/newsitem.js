@@ -3,12 +3,12 @@ import "../newsitem.css";
 
 class NewsItem extends React.Component {
     render(){
-        console.log(this.props);
+        const {title,description} = this.props;
         return(
             <div>
-                <h1 className="title">{this.props.title}</h1>
+                <h1 className="title">{title}</h1>
                 <p>
-                    {this.props.description}
+                    {description}
                 </p>
             </div>
         )
