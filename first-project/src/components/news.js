@@ -3,10 +3,7 @@ import propTypes from 'prop-types';
 import NewsItem from './newsitem';
 
 class news extends React.Component{
-    static propTypes = {
-        news: propTypes.array,
-        name: propTypes.string
-    };
+    
     render(){
         const element = this.props.news.map(news => <NewsItem 
             key={news.id}
@@ -19,6 +16,12 @@ class news extends React.Component{
             </div>
         )
     }
+}
+
+news.propTypes = {
+    news: propTypes.array,
+    name: propTypes.string
+    //if we define wrong these types, console will give us an error.
 }
 
 export default news;
