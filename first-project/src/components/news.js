@@ -19,8 +19,13 @@ class news extends React.Component{
 }
 
 news.propTypes = {
-    news: propTypes.array,
-    name: propTypes.string
+    news: propTypes.array.isRequired,
+    name: propTypes.oneOfType
+    //we can make it possible to put 2 different type of prop by using "oneofType"
+    ([
+        propTypes.number,
+        propTypes.string
+    ])
     //if we define wrong these types, console will give us an error.
 }
 
