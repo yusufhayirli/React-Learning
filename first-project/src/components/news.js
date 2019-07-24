@@ -1,6 +1,7 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import NewsItem from './newsitem';
+import NewsForm from './NewsForm';
+import NewsItem from './NewsItem';
 
 class news extends React.Component{
     static defaultProps = {
@@ -17,6 +18,7 @@ class news extends React.Component{
             <div>
                 {this.props.name}
                 {element}
+                <NewsForm/>
             </div>
         )
     }
