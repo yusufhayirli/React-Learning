@@ -1,13 +1,14 @@
 import React from 'react';
 
 class NewsForm extends React.Component{
-    myButton(){
-        console.log("Button works!")
+    addButton(){
+        console.log(this);
+        this.props.addNews();
     }
     render(){
         return(
             <div>
-                <button onClick={this.myButton}>Add</button>
+                <button onClick={this.addButton.bind(this)}>Add</button>
             </div>
         )
     }

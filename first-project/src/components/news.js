@@ -10,6 +10,7 @@ class news extends React.Component{
     //also we do not need "isRequired" statement if we use defaultProps.
     }
     render(){
+        console.log(this.props.addNews);
         const element = this.props.news.map(news => <NewsItem 
             key={news.id}
             newsData = {news}/>
@@ -18,7 +19,7 @@ class news extends React.Component{
             <div>
                 {this.props.name}
                 {element}
-                <NewsForm/>
+                <NewsForm addNews={this.props.addNews}/>
             </div>
         )
     }
