@@ -14,6 +14,11 @@ class App extends React.Component {
   state = {
     name: "Yusuf"
   }
+  changeName(){
+    this.setState({
+      name:"Osman"
+    })
+  }
 
   render(){
     return (
@@ -23,6 +28,7 @@ class App extends React.Component {
           <h1>
             {this.state.name}
           </h1>
+          <button onClick={this.changeName.bind(this)}>Change The Name</button>
         </header>
       </div>
     );
