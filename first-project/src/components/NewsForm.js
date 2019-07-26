@@ -3,12 +3,10 @@ import React from 'react';
 class NewsForm extends React.Component{
     constructor(props){
         super(props);
-        this.addButton = this.addButton.bind(this);
     }
-    addButton(){
-        console.log(this);
+    addButton = () => {
         this.props.addNews();
-    }
+    };
     render(){
         return(
             <div>
