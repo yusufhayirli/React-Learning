@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
 
 class App extends React.Component {
   //Type 1 State usage
@@ -16,7 +17,7 @@ class App extends React.Component {
   }
   changeName(){
     this.setState({
-      name:"Osman"
+      name:"Osman" + " " + Math.floor(Math.random() * 10 )
     })
   }
 
@@ -29,6 +30,7 @@ class App extends React.Component {
             {this.state.name}
           </h1>
           <button onClick={this.changeName.bind(this)}>Change The Name</button>
+          <Counter/>
         </header>
       </div>
     );
