@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Statefull Component is a dynamic part.
 class Counter extends React.Component{
 
     state = {

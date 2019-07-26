@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
+import Footer from './Footer';
 
 class App extends React.Component {
   //Type 1 State usage
@@ -31,6 +32,7 @@ class App extends React.Component {
           </h1>
           <button onClick={this.changeName.bind(this)}>Change The Name</button>
           <Counter/>
+          <Footer/>
         </header>
       </div>
     );
