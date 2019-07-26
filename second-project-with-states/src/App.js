@@ -9,8 +9,8 @@ class App extends React.Component {
     this.state = {
       name: "Yusuf"
     }
-  // Type 2 State Usage (More efficient)
   }
+  // Type 2 State Usage (More efficient)
   state = {
     name: "Yusuf"
   }
