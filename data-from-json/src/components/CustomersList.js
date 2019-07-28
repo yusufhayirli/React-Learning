@@ -12,6 +12,16 @@ class CustomersList extends React.Component {
         gender: propTypes.string,
         phone: propTypes.string
     }
+
+    state = {
+        id:"",
+        first_name:"",
+        last_name:"",
+        email:"",
+        gender:"",
+        phone:""
+    }
+    
     render() {
         return (
             <div>

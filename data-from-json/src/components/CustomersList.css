@@ -1,4 +1,5 @@
-data{
-    border-left: 6px solid red;
-    background-color: lightgrey;
+.data{
+    border-left: 30px solid goldenrod;
+    background-color: #eeeeee;
+    border-radius: 20px;
 }
