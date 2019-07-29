@@ -25,9 +25,11 @@ class CustomersList extends React.Component {
     render() {
         return (
             <div>
+                <br/>
                 {PostData.map((CustomersDetails,index) => {
                 return (
                 <div className="data">
+                    <hr/>
                     <p>{"Customer's ID: " + CustomersDetails.id}</p>
                     <p>{"First Name: " + CustomersDetails.first_name}</p>
                     <p>{"Last Name: " + CustomersDetails.last_name}</p>
@@ -35,6 +37,7 @@ class CustomersList extends React.Component {
                     <p>{"Gender: " + CustomersDetails.gender}</p>
                     <p>{"Phone: " + CustomersDetails.phone}</p>
                     <hr/>
+                    <br/>
                 </div>
                 )})}
             </div>
