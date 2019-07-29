@@ -4,29 +4,10 @@ import propTypes from 'prop-types';
 import './CustomersList.css';
 
 class CustomersList extends React.Component {
-    static propTypes = {
-        id: propTypes.number,
-        first_name: propTypes.string,
-        last_name: propTypes.string,
-        email: propTypes.string,
-        gender: propTypes.string,
-        phone: propTypes.string
-    }
-
-    state = {
-        id:"",
-        first_name:"",
-        last_name:"",
-        email:"",
-        gender:"",
-        phone:""
-    }
-    
     render() {
         return (
             <div>
-                <br/>
-                {PostData.map((CustomersDetails,index) => {
+                {PostData.map((CustomersDetails) => {
                 return (
                 <div className="data">
                     <hr/>
