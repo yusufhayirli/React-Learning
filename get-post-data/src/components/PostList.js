@@ -11,7 +11,7 @@ class PostList extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('https://raw.githubusercontent.com/yusufhayirli/React-Learning/master/data-from-json/src/components/MOCK_CUSTOMERS.json')
             .then(Response => {
             console.log(Response)
             this.setState({posts:Response.data})
@@ -22,16 +22,34 @@ class PostList extends Component {
             })
         }
 
+    removePost(id){
+        this.setState(state=>({posts: state.posts.filter(post=> post.id !== id)})
+        );}
+        
     render() {
-        const {posts , errorMsg} = this.state
+        const {posts , errorMsg, e} = this.state
         return (
             <div>
                 Post List Here.
-                {
-                    posts.length ?
-                    posts.map(post => <div> key={post.id}>{post.title}</div>) :
-                    null
-                }
+                <br></br>
+                
+                <hr></hr>
+                {posts.map(post =>
+                <div key={post.id}>
+                    User ID : {post.id}
+                    <br></br>
+                    First Name : {post.first_name}
+                    <br></br>
+                    Last Name : {post.last_name}
+                    <br></br>
+                    Email : {post.email}
+                    <br></br>
+                    Gender : {post.gender}
+                    <br></br>
+                    Phone : {post.phone}
+                    <br></br>
+                    <hr></hr>
+                </div>) }:
                 { errorMsg ? <div>{errorMsg}</div> : null}
             </div>
         );

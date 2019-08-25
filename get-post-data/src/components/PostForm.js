@@ -7,15 +7,19 @@ class PostForm extends Component {
 
         this.state = {
             contacts:[{
-                userId:'',
-                title:'',
-                body:''
+                id:'',
+                first_name:'',
+                last_name:'',
+                email:'',
+                gender:'',
+                phone:''
             }]
         }
     }
 
     changeHandler = (e) => {
         this.setState({
+            //it helps to update default state values as entered value in input place
             [e.target.name] : e.target.value
         })
     }
@@ -24,7 +28,7 @@ class PostForm extends Component {
         e.preventDefault()
         console.log(this.state)
         axios
-        .post("https://jsonplaceholder.typicode.com/posts", this.state)
+        .post("https://raw.githubusercontent.com/yusufhayirli/React-Learning/master/data-from-json/src/components/MOCK_CUSTOMERS.json", this.state)
         .then(Response => {
             console.log(Response)
         })
@@ -34,35 +38,66 @@ class PostForm extends Component {
     }
 
     render() {
-        const { userId, title, body } = this.state
+        const { id, first_name, last_name, email, gender, phone } = this.state
         return (
             <div>
                 <form onSubmit = {this.submitHandler}>
                     <div>
                         <input 
-                        type="text" 
-                        name="userId" 
-                        value={userId}
+                        type="text"
+                        name="id" 
+                        value={id}
                         onChange={this.changeHandler}
+                        placeholder={"Enter id"}
                         />
                     </div>
                     <div>
                         <input 
                         type="text" 
-                        name="title" 
-                        value={title} 
+                        name="first_name" 
+                        value={first_name} 
                         onChange={this.changeHandler}
+                        placeholder={"Enter first name"}
                         />
                     </div>
                     <div>
                         <input 
                         type="text" 
-                        name="body" 
-                        value={body} 
+                        name="last_name" 
+                        value={last_name} 
                         onChange={this.changeHandler}
+                        placeholder={"Enter last name"}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                        type="text" 
+                        name="email" 
+                        value={email} 
+                        onChange={this.changeHandler}
+                        placeholder={"Enter E-mail"}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                        type="text" 
+                        name="gender" 
+                        value={gender} 
+                        onChange={this.changeHandler}
+                        placeholder={"Enter gender"}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                        type="text" 
+                        name="phone" 
+                        value={phone} 
+                        onChange={this.changeHandler}
+                        placeholder={"Enter phone"}
                         />
                     </div>
                     <button type="submit">Submit</button>
+                    <br></br>
                 </form>
             </div>
         );
