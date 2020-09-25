@@ -7,7 +7,6 @@ import { Layout } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-
 class App extends React.Component {
   render(){
     return (
